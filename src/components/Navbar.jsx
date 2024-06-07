@@ -58,8 +58,8 @@ const Navbar = () => {
       <ul
         className={`absolute top-14 left-0 w-full bg-zinc-800 duration-300 z-40 flex flex-col justify-center items-center py-4 ${
           isShow
-            ? "opacity-0 pointer-events-none"
-            : "opacity-100 pointer-events-auto"
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         } `}>
         <NavLink to={"/"} className='text-white text-base font-semibold'>
           Home
