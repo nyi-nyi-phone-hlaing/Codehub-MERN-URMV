@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
       <Splider slideMovies={moives} />
-      <div className='w-full h-screen bg-white flex justify-center items-center'>
+      <div className='w-full h-screen bg-white flex justify-center items-center p-5'>
         <div>
           <h1 className='font-bold text-3xl mb-6 text-rose-600'>
             Best pick for hassle-free streaming experience.

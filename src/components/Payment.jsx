@@ -4,8 +4,8 @@ const Payment = () => {
       <h1 className='font-bold text-3xl text-center text-gray-500 mb-14'>
         Become a premium user ☕️
       </h1>
-      <div className='flex justify-center items-center gap-4'>
-        <div className='bg-zinc-800 flex flex-col items-center p-4 transform translate-y-6'>
+      <div className='flex justify-center items-center gap-4 max-md:flex-col'>
+        <div className='bg-zinc-800 flex flex-col items-center p-4 transform translate-y-6 max-md:translate-y-0'>
           <img
             src='../images/icon04.png'
             alt='icon04'
@@ -23,7 +23,7 @@ const Payment = () => {
             30-days money-back guarantee
           </p>
         </div>
-        <div className='bg-zinc-800 flex flex-col items-center p-4 transform -translate-y-6'>
+        <div className='bg-zinc-800 flex flex-col items-center p-4 transform -translate-y-6 max-md:translate-y-0'>
           <img
             src='../images/icon05.png'
             alt='icon04'
@@ -44,7 +44,7 @@ const Payment = () => {
             30-days money-back guarantee
           </p>
         </div>
-        <div className='bg-zinc-800 flex flex-col items-center p-4 transform translate-y-6'>
+        <div className='bg-zinc-800 flex flex-col items-center p-4 transform translate-y-6 max-md:translate-y-0'>
           <img
             src='../images/icon06.png'
             alt='icon04'

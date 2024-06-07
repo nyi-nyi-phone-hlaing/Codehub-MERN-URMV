@@ -39,7 +39,7 @@ const MovieList = ({ movies, sectionName }) => {
           There is no movies yet!
         </p>
       )}
-      <div className='gap-4 px-24 py-4 grid grid-cols-6'>
+      <div className='gap-4 px-4 py-4 grid grid-cols-2 sm:grid-cols-3 sm:px-20 md:grid-cols-4 md:px-24 lg:grid-cols-5 xl:grid-cols-6'>
         {movies &&
           details &&
           movies.map((mv) => (

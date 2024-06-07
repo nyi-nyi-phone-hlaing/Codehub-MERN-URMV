@@ -51,7 +51,7 @@ const Details = () => {
         />
         <div>
           <h1 className='text-white font-semibold text-xl'>{movie.title}</h1>
-          <ul className='flex items-center justify-start gap-2 my-2'>
+          <ul className='flex items-center justify-start gap-2 my-2 flex-wrap'>
             {movie.genres &&
               movie.genres.map((genere) => (
                 <li

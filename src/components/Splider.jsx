@@ -24,7 +24,7 @@ const Splider = ({ slideMovies }) => {
                     src={`https://image.tmdb.org/t/p/original/${mv.backdrop_path}`}
                     alt={mv.title}
                   />
-                  <div className='absolute bottom-20 left-24 z-10 p-3 bg-slate-900 bg-opacity-30 backdrop-blur-sm rounded-md'>
+                  <div className='w-fit absolute bottom-20 left-24 z-10 p-3 bg-slate-900 bg-opacity-30 backdrop-blur-sm rounded-md max-md:left-5'>
                     <h1 className='font-bold text-5xl text-rose-600'>
                       {mv.title}
                     </h1>

@@ -8,10 +8,10 @@ const Watch = () => {
   const { title } = useParams();
   const movie = useLoaderData();
   const mv = movie.results[0];
-
+  const deviceWidth = window.innerWidth;
   const opts = {
-    width: "1000",
-    height: "500",
+    width: deviceWidth >= 768 ? "760" : window.innerWidth,
+    height: deviceWidth >= 768 ? "400" : "220",
     playerVars: {
       autoplay: 1,
       origin: "https://www.themoviedb.org",
@@ -23,7 +23,7 @@ const Watch = () => {
 
   return (
     <div>
-      <nav className='relative z-20 w-full h-14 bg-zinc-950 flex justify-start items-center px-3'>
+      <nav className='relative z-20 w-full h-14 bg-zinc-950 flex justify-start items-center px-3 '>
         <Link
           to={"/"}
           className='size-8 aspect-square text-white bg-zinc-900 flex justify-center items-center mr-3'>
@@ -31,7 +31,7 @@ const Watch = () => {
         </Link>
         <h1 className='text-lg font-semibold text-white'>{title}</h1>
       </nav>
-      <div className='w-full h-[calc(100vh-3.5rem)] bg-zinc-900 flex items-center justify-center'>
+      <div className='w-full h-[calc(100vh-3.5rem)] bg-zinc-900 flex items-center justify-center max-md:items-start'>
         {mv && mv.key ? (
           <YouTube videoId={mv.key} opts={opts} />
         ) : (
@@ -52,7 +52,7 @@ export const loader = async ({ params }) => {
     options
   );
   if (!response.ok) {
-    throw json();
+    throw json({ message: "Internal Server Error" }, { status: 500 });
   }
 
   const data = await response.json();
